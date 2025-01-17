@@ -2,7 +2,9 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
-     overflow-x: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Reset default margins to avoid side effects */
+    padding: 0;
 }
 /* styling menu icon */
 .nav-menu{
@@ -15,6 +17,9 @@ body{
 .navbar-nav a{
     color: black;
     position: relative;
+    text-decoration: none; /* Ensures clean links */
+    padding: 10px 15px;
+
 }
 .navbar-nav a:hover{
     color: #fca61f;
@@ -321,6 +326,8 @@ body{
 .contact-form .form-control:focus{
     box-shadow: none;
     border: 1px solid #fca61f;
+    width: calc(100% - 20px); /* Ensure no overflow */
+    max-width: 100%; /* Cap width to prevent breaking */
 }
 .contact-form .form-control{
     padding: 10px 10px;
